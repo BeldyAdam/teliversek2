@@ -27,11 +27,6 @@ body{
     background-color: white;
 }
 
-
-table{
-    width: 100%;
-}
-
 footer{
     background-color: rgb(0, 102, 255);
     text-align: center;
@@ -65,30 +60,41 @@ aside{
     grid-area: as;
     text-align: left;
     padding: 15px;
+    border: solid black 1px;
 }
 
-tr:nth-child(odd){
-    background-color: aqua;
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 
-@media only screen and (max-width: 700px) {
-    main{
-        grid-template-areas: "h h"
-        "n n"
-        "a as"
-        "f f";
-        width: 100%;
-    }
+.galeria>.balra>img{
+    width: 75%;
+    padding-top: 10px;
+    border: solid black 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    height: 100%;
+    max-height: 250px;
+    transform: rotate(-20deg);
+    box-shadow: 5px 10px #888888;
+    background-color: white;
 }
 
-@media only screen and (max-width: 400px) {
-    main{
-        grid-template-areas: "h"
-        "n"
-        "a"
-        "as"
-        "f";
-        width: 100%;
-    }
+
+.galeria>.jobbra>img{
+    width: 75%;
+    padding-top: 10px;
+    border: solid black 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    height: 100%;
+    max-height: 250px;
+    transform: rotate(20deg);
+    box-shadow: 5px 10px #888888;
+    background-color: white;
 }
+
